@@ -1,0 +1,46 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+fencing_sarbel_match:your action
+{% endblock %}
+
+{% block content %}
+
+<h4>Instructions</h4>#これつければinstruction.htmlはいらない。
+<p>
+you are Player1. Choose your action.
+attackは{{player.role()[0]}}でrepostは{{player.role()[1]}}で
+backは{{player.role()[2]}}の確率でいままでは成功しています。#こんな感じの表記で大丈夫かな
+</p>
+
+
+
+<h4>Round history</h4>
+<table class="table">#ここの以下をなんとかしたい
+    <tr>
+        <th>Round</th>
+        <thPlayer> and outcome</th>
+            </tr>
+    {% for p in player_in_previous_rounds %}
+    <tr>
+        <td>{{ p.subsession.round_number }}</td>
+        <td>
+            You were the {{ p.role }} and {% if p.is_winner %}
+            won {% else %} lost {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>
+choose your action.
+</p>
+
+{% formfield player.action with label="I choose:" %}
+
+{% formfield player.anticipation with label="I choose:" %}
+
+{% next_button %}
+
+{% endblock %}

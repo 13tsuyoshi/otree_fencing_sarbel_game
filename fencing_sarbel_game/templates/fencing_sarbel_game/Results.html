@@ -1,0 +1,35 @@
+﻿{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Page title
+{% endblock %}
+
+{% block content %}
+
+<!--
+Documentation on how to write a django template here:
+https://docs.djangoproject.com/en/dev/topics/templates/
+
+Bootstrap comes pre-loaded, so you can use any B
+ootstrap elements:
+http://getbootstrap.com/components/
+
+-->
+
+
+<p>＃一つでいいの？  二人別々で出したい
+You started with an endowment of {{ Constants.endowment }},
+of which you contributed {{ player.contribution }}.
+Your group contributed {{ group.total_contribution }},
+resulting in an individual share of {{ group.individual_share }}.
+Your profit is therefore {{ player.payoff }}.
+</p>
+
+#class Results(Page):
+pass　　でviews.pyはいいの？
+
+    {% next_button %}
+{% endblock %}
+
+
