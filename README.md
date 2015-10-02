@@ -12,7 +12,7 @@
 
 課題  
 ・models.pyのclass Group(BaseGroup):のところで、一様分布をもとに出された確率に従ってpayoffにポイントを入れるのですがそこのところをもっと簡潔なコードにしてかけないかなと思っています.  
-・１５点入ったら終わりにしたいんだけどもどうやってそうすればいいかが分からない。  　
+・１５点入ったら終わりにしたいんだけどもどうやってそうすればいいかが分からない。  
 ・views.pyのclass Choice(Page):で#'action'と'anticipation'の二つを表示させたいがその場合form_fields = ['action']   だけでは足りず、どうしようか。’action'と'anticipation'の二つを選択するようにゲームは組み立ててます  
 ・Choice.htmlでは{{player.role()[0]}}というふうにしてよいか.  
 player.role()はmodels.pyのclass Player(BasePlayer):のdef role(self):で一次元配列のリストを返します。  
