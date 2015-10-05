@@ -11,7 +11,7 @@
 ・先に１５点を先取した方をこのゲームの勝利とする。  
 
 課題  
-・models.pyのclass Group(BaseGroup):のところで、一様分布をもとに出された確率に従ってpayoffにポイントを入れるのですがそこのところをもっと簡潔なコードにしてかけないかなと思っています.  （解決済み）
+・models.pyのclass Group(BaseGroup):のところで、一様分布をもとに出された確率に従ってpayoffにポイントを入れるのですがそこのところをもっと簡潔なコードにしてかけないかなと思っています.  （解決済み）  
 ・１５点入ったら終わりにしたいんだけどもどうやってそうすればいいかが分からない。  
 ・views.pyのclass Choice(Page):で#'action'と'anticipation'の二つを表示させたいがその場合form_fields = ['action']   だけでは足りず、どうしようか。’action'と'anticipation'の二つを選択するようにゲームは組み立ててます  
 ・Choice.htmlでは{{player.role()[0]}}というふうにしてよいか.  
