@@ -11,10 +11,11 @@
 ・先に１５点を先取した方をこのゲームの勝利とする。  
 
 課題  
-・models.pyのclass Group(BaseGroup):のところで、一様分布をもとに出された確率に従ってpayoffにポイントを入れるのですがそこのところをもっと簡潔なコードにしてかけないかなと思っています.  
+・models.pyのclass Group(BaseGroup):のところで、一様分布をもとに出された確率に従ってpayoffにポイントを入れるのですがそこのところをもっと簡潔なコードにしてかけないかなと思っています.  （解決済み）
 ・１５点入ったら終わりにしたいんだけどもどうやってそうすればいいかが分からない。  
 ・views.pyのclass Choice(Page):で#'action'と'anticipation'の二つを表示させたいがその場合form_fields = ['action']   だけでは足りず、どうしようか。’action'と'anticipation'の二つを選択するようにゲームは組み立ててます  
 ・Choice.htmlでは{{player.role()[0]}}というふうにしてよいか.  
 player.role()はmodels.pyのclass Player(BasePlayer):のdef role(self):で一次元配列のリストを返します。  
-・これは月曜日に口頭で説明してもらった方が、いいと思いますがotreeのチュートリアルにある例３のmatching   penniesのhtmlファイルの過去のプレイを表示させる方法を理解していません。なのでそこを教えてほしいです。　　
+・これは月曜日に口頭で説明してもらった方が、いいと思いますがotreeのチュートリアルにある例３のmatching   penniesのhtmlファイルの過去のプレイを表示させる方法を理解していません。なのでそこを教えてほしいです。（分かりそうなので、
+もう少し自分で考えます）
 
