@@ -1,0 +1,34 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+Anticipate for Round {{ round_number }}
+{% endblock %}
+
+{% block content %}
+
+
+<p>
+ルール説明
+</p>
+
+<p
+
+{% if role == 'Player 1' %}
+あなたの得意技は{{player1_skills}}です。
+{% else %}
+あなたの得意技は{{player2_skills}}です。
+{% endif %}
+</p>
+
+
+<p>
+まず、あなたのanticipationを選んでください
+</p>
+
+{% formfield player.anticipation with label="choose anticipation:" %}
+
+{% next_button %}
+
+
+{% endblock %}

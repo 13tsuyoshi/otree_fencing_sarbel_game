@@ -1,0 +1,68 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+Results for Round {{ round_number }}
+{% endblock %}
+
+{% block content %}
+
+<p>
+{{ round_number }}ラウンド目が終了しました。<br>
+現在の結果を含めた今までの結果は以下の通りです。<br>
+この表で今回の結果を確認して下さい。<br>
+</p>
+
+<table class="table">
+    <tr>
+        <th>Round</th>
+    </tr>
+    <tr>
+        <th>your action </th>
+    </tr>
+    <tr>
+        <th>action of the opponent </th>
+    </tr>
+    <tr>
+        <th>your payoff</th>
+    </tr>
+    <tr>
+        <th>payoff of the opponent </th>
+    </tr>
+    {% for p in player_in_previous_rounds %}
+    <tr>
+        <td> {{ p.subsession.round_number }} </td>
+    </tr>
+    <tr>
+        <td>p.action </td>
+    </tr>
+    <tr>
+        <td> p.other_player().action</td> #要再考prisonor のResult.htmlではYou were Player 1. You chose "{{ player.penny_side }}",
+        #Player 2 guessed "{{ player.other_player.penny_side}}"になっているため
+    </tr>
+    <tr>
+        <td>p.payoff </td>
+    </tr>
+    <tr>
+        <td> p.other_player().payoff</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<p>
+よって現在の得点は、あなたが{{own_total_payoff}}で相手は{{opponent_total_payoff}}です。<br>
+確認し、戦略を考えたら次のラウンドへ行ってください。あなたか相手のどちらかが１５点先取したら先取したほうの勝ちでゲームは終了です。
+</p>
+
+<p>   #これで１５点マッチになったのだろうか。
+
+{% if (own_total_payoff != end_game_point) and (opponent_total_payoff != end_game_point) %}
+{% next_button %}。
+{% else %}
+ゲームは終了です。
+{% endif %}
+</p>
+
+
+{% endblock %}
