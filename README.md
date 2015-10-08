@@ -1,4 +1,4 @@
-# otree_fencing_sarbel_game
+# otree_fencing_sarbel
 やりたいゲームとしては以下です。  
 ・２人対戦のゲーム  
 ・各プレイヤーはattack,repost,backの３つの技を使え、毎ラウンドその３つのどの技を出すか選ぶ  
@@ -11,4 +11,6 @@
 ・先に１５点を先取した方をこのゲームの勝利とする。  
 
 ＊一応完成させたつもりですが、まだ動かしていません。setting.pyのところ等を読んでる途中です。
+　　
 
+otree_fencing_sarbelが最新版のフォルダです。
